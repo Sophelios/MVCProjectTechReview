@@ -1,0 +1,151 @@
+﻿@model IEnumerable<MVCReviewProject.Models.techReview>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!--Jubotron displays latest review-->
+<div class="jumbotron styleJumbo">
+    <div class="container clarity">
+        <h2 class="head">Latest Review</h2>
+        <div>
+            @{ var tem = Model.Last(); }
+            <h3 class="head">@Html.DisplayNameFor(model => model.Item)</h3>
+            @Html.DisplayFor(modelItem => tem.Item)
+        </div>
+        <h3 class="head">@Html.DisplayNameFor(model => model.Review)</h3>
+        <div class="setLimitJumbo">
+            @Html.DisplayFor(modelItem => tem.Review)
+        </div>
+        <div>
+            <h3 class="flotsam head">Genre</h3>
+            @Html.DisplayFor(modelItem => tem.Category.Name)
+        </div>
+        <div>
+            <h5 class="head">@Html.DisplayNameFor(model => model.Published)</h5>
+            <h5 class="head">@Html.DisplayFor(modelItem => tem.Published)</h5>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <!--Create thumbnails for each item-->
+    @foreach (var item in Model)
+    {
+        <!--Separate statement for Portable category-->
+        if (item.Category.Name == "Portable")
+        {
+        <div class="col-sm-4 col-md-3">
+            <div class="thumbnail styleBoxesPortable">
+
+                <div>
+                    <h3 class="head">@Html.DisplayNameFor(model => model.Item)</h3>
+                    @Html.DisplayFor(modelItem => item.Item)
+                </div>
+                <h3 class="head">@Html.DisplayNameFor(model => model.Review)</h3>
+                <div class="setLimit">
+                    @Html.DisplayFor(modelItem => item.Review)
+                </div>
+                <div>
+                    <h3 class="head">Genre</h3>
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                </div>
+                <div>
+                    <h5 class="head">@Html.DisplayNameFor(model => model.Published)</h5>
+                    @Html.DisplayFor(modelItem => item.Published)
+                </div>
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default buttColor">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "buttText" })
+                    </button>
+                    <button type="button" class="btn btn-default buttColor">
+                        @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "buttText" })
+                    </button>
+                    <button type="button" class="btn btn-default buttColor">
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "buttText" })
+                    </button>
+                </div>
+            </div>
+        </div>
+        }
+        <!--Separate statement for Wearable category-->
+        if (item.Category.Name == "Wearable")
+        {
+        <div class="col-sm-4 col-md-3">
+            <div class="thumbnail styleBoxesWearable">
+
+                <div>
+                    <h3 class="head">@Html.DisplayNameFor(model => model.Item)</h3>
+                    @Html.DisplayFor(modelItem => item.Item)
+                </div>
+                <h3 class="head">@Html.DisplayNameFor(model => model.Review)</h3>
+                <div class="setLimit">
+                    @Html.DisplayFor(modelItem => item.Review)
+                </div>
+                <div>
+                    <h3 class="head">Genre</h3>
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                </div>
+                <div>
+                    <h5 class="head">@Html.DisplayNameFor(model => model.Published)</h5>
+                    @Html.DisplayFor(modelItem => item.Published)
+                </div>
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default buttColor">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "buttText" })
+                    </button>
+                    <button type="button" class="btn btn-default buttColor">
+                        @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "buttText" })
+                    </button>
+                    <button type="button" class="btn btn-default buttColor">
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "buttText" })
+                    </button>
+                </div>
+            </div>
+        </div>
+        }
+        <!--Separate statement for Gadgets category-->
+        if (item.Category.Name == "Gadgets")
+        {
+        <div class="col-sm-4 col-md-3">
+            <div class="thumbnail styleBoxesGadgets">
+
+                <div>
+                    <h3 class="head">@Html.DisplayNameFor(model => model.Item)</h3>
+                    @Html.DisplayFor(modelItem => item.Item)
+                </div>
+                <h3 class="head">@Html.DisplayNameFor(model => model.Review)</h3>
+                <div class="setLimit">
+                    @Html.DisplayFor(modelItem => item.Review)
+                </div>
+                <div>
+                    <h3 class="head">Genre</h3>
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                </div>
+                <div>
+                    <h5 class="head">@Html.DisplayNameFor(model => model.Published)</h5>
+                    @Html.DisplayFor(modelItem => item.Published)
+                </div>
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default buttColor">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "buttText" })
+                    </button>
+                    <button type="button" class="btn btn-default buttColor">
+                        @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "buttText" })
+                    </button>
+                    <button type="button" class="btn btn-default buttColor">
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "buttText" })
+                    </button>
+                </div>
+            </div>
+        </div>
+            }
+        }
+</div>
+<div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default buttColor">
+        @Html.ActionLink("Create New", "Create", new { id = "nothing" }, new { @class = "buttText" })
+    </button>
+</div>

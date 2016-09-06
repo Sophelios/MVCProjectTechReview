@@ -1,0 +1,126 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color:#EBEBEB;
+    
+}
+#bootstrapOverrides{
+    font-family: 'Fjalla One', sans-serif !important;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+/*Sets limit on preview in Index*/
+.setLimit {
+    margin:auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+/*styling for Portable reviews*/
+.styleBoxesPortable {
+    background-image: url('Images/portable.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+/*styling for Gadet Reviews*/
+.styleBoxesGadgets {
+    background-image: url('Images/gadgets.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+/*Styling for wearable reviews*/
+.styleBoxesWearable {
+    background-image: url('Images/wearable.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+/*set color for buttons*/
+.buttColor {
+    background-color:#7EEC7E;
+    border:solid #EBEBEB 1px;
+}
+/*color text of buttons*/
+.buttText {
+    color:white;
+}
+/*styling for headers*/
+.head{
+    text-decoration:underline;
+    font-family: 'Fjalla One', sans-serif !important;
+}
+/*styling for Jumbotron*/
+.styleJumbo {
+    background-image: url('Images/computerImage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: right;
+    color:black;
+
+}
+/*limit review display in jumbotron*/
+.setLimitJumbo {
+    margin: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    float:right;
+    clear:both;
+
+}
+/*needed to keep things in their place*/
+.flotsam{
+    clear:both;
+}
+/*styling for jumbotron box*/
+.clarity{
+    margin-left:60%;
+    background-color:#EBEBEB;
+    opacity:0.75;
+}
+/*adjust lineheight on review page for readability*/
+.lineHeight{
+    line-height:30px;
+}
+/*put reviews in a white box to make them pop*/
+.reviewBG{
+    padding-top:3%;
+    padding-bottom:3%;
+    background-color:white;
+}
+/*messing with the default footer*/
+.footer{
+    background-color:black;
+    color:#EBEBEB;
+}

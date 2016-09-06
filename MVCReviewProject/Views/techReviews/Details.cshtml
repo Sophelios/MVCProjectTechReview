@@ -1,0 +1,54 @@
+﻿@model MVCReviewProject.Models.techReview
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tech Reviews</h4>
+    <hr />
+    <dl class="dl-horizontal reviewBG">
+        <dt class="lineHeight">
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </dt>
+
+        <dd class="lineHeight">
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+
+        <dt class="lineHeight">
+            @Html.DisplayNameFor(model => model.Item)
+        </dt>
+
+        <dd class="lineHeight">
+            @Html.DisplayFor(model => model.Item)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Review)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Review)
+        </dd>
+
+        <dt class="lineHeight">
+            @Html.DisplayNameFor(model => model.Published)
+        </dt>
+
+        <dd class="lineHeight">
+            @Html.DisplayFor(model => model.Published)
+        </dd>
+
+    </dl>
+</div>
+<div class="btn-group" role="group">
+    <button type="button" class="btn btn-default buttColor">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class = "buttText" })
+    </button>
+    <button type="button" class="btn btn-default buttColor">
+        @Html.ActionLink("Back to List", "Index", new { id = "nope" }, new { @class = "buttText" })
+    </button>
+</div>
